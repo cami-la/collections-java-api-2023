@@ -24,7 +24,6 @@
 - O método `sort()` em conjunto com `Collections.reverseOrder()` permite ordenar em ordem descendente.
 - A classe `Collections` também oferece métodos para busca, embaralhamento, cópia e preenchimento em coleções.
 - Ela simplifica a implementação de algoritmos de classificação e facilita a manipulação de dados em coleções.
-- A classe `Collections` é uma parte importante da biblioteca de coleções do Java e oferece métodos convenientes para trabalhar com coleções em Java.
 
 ```java
 package main.java.comparableXcomparator;
