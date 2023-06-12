@@ -22,8 +22,7 @@
 - Ela fornece métodos para ordenação, busca, manipulação e sincronização de coleções.
 - O método `sort()` é usado para ordenar uma lista em ordem ascendente.
 - O método `sort()` em conjunto com `Collections.reverseOrder()` permite ordenar em ordem descendente.
-- A classe `Collections` também oferece métodos para busca, embaralhamento, cópia e preenchimento em coleções.
-- Ela simplifica a implementação de algoritmos de classificação e facilita a manipulação de dados em coleções.
+
 
 ```java
 package main.java.comparableXcomparator;
