@@ -23,9 +23,6 @@
 
 [2] "Java™ Platform, Standard Edition 17 API Specification - Class List." Oracle. Disponível em: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html.
 
-
-<br>
-
 # Fixando os Conhecimentos
 
 Exercícios:
