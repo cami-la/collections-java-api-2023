@@ -15,7 +15,7 @@
 - Embora a interface `Map` não ser filha direta da interface `Collection` ela também é considerada uma coleção devido a sua função.
 
 <p align="center">
-<img src="./assets/image/collection-framework-methods.png" width="700" height="300" alt="List interface hierarchy Java"><br>
+<img src="./assets/image/collection-framework-methods.png" alt="List interface hierarchy Java"><br>
 <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html">Method Sumary Collection Interface</a>
 </p>
 
