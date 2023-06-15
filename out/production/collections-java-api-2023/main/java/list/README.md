@@ -1,7 +1,7 @@
 # List
 
 <p align="center">
-<img src="/home/cami/Documents/git/collections-java-api-2023/images/list-interface-hierarchy.png" width="400" height="200" alt="List interface hierarchy Java"><br>
+<img src="../../../../assets/image/list-interface-hierarchy.png" alt="List interface hierarchy Java"><br>
 <a href="https://data-flair.training/blogs/collection-framework-in-java/">Hierarchy of Collection Framework in Java </a>
 </p>
 
@@ -22,9 +22,6 @@
 [1] "Collections in Java Tutorial." DigitalOcean Community. Disponível em: https://www.digitalocean.com/community/tutorials/collections-in-java-tutorial.
 
 [2] "Java™ Platform, Standard Edition 17 API Specification - Class List." Oracle. Disponível em: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html.
-
-
-<br>
 
 # Fixando os Conhecimentos
 

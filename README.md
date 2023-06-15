@@ -30,7 +30,8 @@
 
 [3] "Java Comparator and Comparable - Baeldung." Baeldung. Disponível em: https://www.baeldung.com/java-comparator-comparable.
 
-[4] "Java™ Platform, Standard Edition 17 API Specification - Class Collections." Oracle. Disponível em: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collections.html](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collections.html.
+[4] 
+"Java™ Platform, Standard Edition 17 API Specification - Class Collections." Oracle. Disponível em: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collections.html.
 ---
 
 ### Dúvidas e Suporte

@@ -16,6 +16,13 @@
 - Um `Comparator` está presente no pacote `java.util`.
 - Podemos ordenar os elementos da lista do tipo `Comparator` usando o método `Collections.sort(List, Comparator)`.
 
+## Collections
+
+- A classe `Collections` é uma classe utilitária do Java para operações comuns em coleções.
+- Ela fornece métodos para ordenação, busca, manipulação e sincronização de coleções.
+- O método `sort()` é usado para ordenar uma lista em ordem ascendente.
+- O método `sort()` em conjunto com `Collections.reverseOrder()` permite ordenar em ordem descendente.
+
 
 ```java
 package main.java.comparableXcomparator;
@@ -101,7 +108,9 @@ class CompararAnoAutorTitulo implements Comparator<Livro> {
 
 [1] "Comparable vs Comparator in Java." GeeksforGeeks. Disponível em: https://www.geeksforgeeks.org/comparable-vs-comparator-in-java/.
 
-[2] "Difference between Comparable and Comparator in Java." JavaTpoint. Disponível em: https://www.javatpoint.com/difference-between-comparable-and-comparator
+[2] "Difference between Comparable and Comparator in Java." JavaTpoint. Disponível em: https://www.javatpoint.com/difference-between-comparable-and-comparator.
+
+[3] "Java™ Platform, Standard Edition 17 API Specification - Class Collections." Oracle. Disponível em: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collections.html.
 
 ---
 ### Dúvidas e Suporte

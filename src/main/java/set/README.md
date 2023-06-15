@@ -23,7 +23,7 @@
 
 [2] "Java™ Platform, Standard Edition 17 API Specification - Class Set." Oracle. Disponível em: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html.
 
-# Fixando os Conhecimentos
+## Fixando os Conhecimentos
 
 Exercícios:
 
@@ -42,14 +42,14 @@ Exercícios:
 - `exibirAlunos()`: Exibe todos os alunos do conjunto.
 </p>
 
-### 2. Conjunto de Números Primos
-<p>
-Crie uma classe chamada "ConjuntoNumerosPrimos" que possui um conjunto de números inteiros primos como atributo. Implemente os seguintes métodos:
+### 2. Gerenciador de Eventos
+<p>Crie uma classe chamada "GerenciadorEventos" que possui uma lista de objetos do tipo "Evento" como atributo. Cada evento possui atributos como título, data, local e número de participantes. Implemente os seguintes métodos:
 
-- `adicionarNumeroPrimo(int numero)`: Adiciona um número primo ao conjunto.
-- `removerNumeroPrimo(int numero)`: Remove um número primo do conjunto.
-- `verificarNumeroPrimo(int numero)`: Verifica se um número está presente no conjunto de números primos.
-- `exibirNumerosPrimos()`: Exibe todos os números primos do conjunto.
+- `adicionarPedido(Pedido pedido)`: Adiciona um pedido à lista.
+- `removerPedido(int numero)`: Remove um pedido da lista com base no seu número.
+- `buscarPedidoPorCliente(String nomeCliente)`: Retorna uma lista com todos os pedidos do cliente especificado.
+- `calcularValorTotalPedidos()`: Calcula e retorna o valor total de todos os pedidos na lista.
+- `exibirPedidos()`: Exibe todos os pedidos da lista.
 </p>
 
 ### 3. Conjunto de Palavras Únicas

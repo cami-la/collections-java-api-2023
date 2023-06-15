@@ -23,9 +23,7 @@
 
 [2] "Java™ Platform, Standard Edition 17 API Specification - Class Map." Oracle. Disponível em: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html.
 
-<br>
-
-# Fixando os Conhecimentos
+## Fixando os Conhecimentos
 
 Exercícios:
 
