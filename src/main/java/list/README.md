@@ -52,15 +52,6 @@ Cada item é representado por uma classe chamada "Item" que possui atributos com
 - `exibirItens()`: Exibe todos os itens presentes no carrinho, mostrando seus nomes, preços e quantidades.
 </p>
 
-### 3. Lista de Nomes
-<p>Crie uma classe chamada "ListaNomes" que possui uma lista de nomes como atributo. Implemente os seguintes métodos:
-
-- `adicionarNome(String nome)`: Adiciona um nome à lista de nomes.
-- `removerNome(String nome)`: Remove um nome da lista de nomes, caso esteja presente.
-- `verificarNome(String nome)`: Verifica se um nome está presente na lista de nomes e retorna um valor booleano indicando o resultado.
-- `obterTodosNomes()`: Retorna uma lista contendo todos os nomes presentes na lista.
-</p>
-
 ----
 
 ## Pesquisa em List
@@ -83,12 +74,6 @@ Cada item é representado por uma classe chamada "Item" que possui atributos com
 - `encontrarMenorNumero()`: Encontra o menor número na lista e retorna o valor.
 - `exibirNumeros()`: Retorna uma lista contendo todos os numeros presentes na lista.
 
-### 3. Números Pares e Ímpares
-<p>Crie uma classe chamada "NumerosParesImpares" que possui uma lista de números inteiros como atributo. Implemente os seguintes métodos:
-
-- `separarParesEImpares()`: Separa os números pares e ímpares em duas listas diferentes.
-</p>
-
 -------
 
 ## Ordenação em List
@@ -108,14 +93,6 @@ Cada item é representado por uma classe chamada "Item" que possui atributos com
 - `ordenarAscendente()`: Ordena os números da lista em ordem ascendente usando a interface Comparable e a class Collections.
 - `ordenarDescendente()`: Ordena os números da lista em ordem descendente usando um Comparable e a class Collections.
 </p>
-
-### 3. Ordenação de Produtos
-<p>Crie uma classe chamada "OrdenacaoProdutos" que possui uma lista de objetos do tipo "Produto" como atributo. Cada produto possui atributos como nome, preço e quantidade em estoque. Implemente os seguintes métodos:
-
-- `adicionarProduto(Produto produto)`: Adiciona um produto à lista.
-- `ordenarPorPreco()`: Ordena os produtos da lista por preço usando a interface Comparable.
-- `ordenarPorEstoque()`: Ordena os produtos da lista por quantidade em estoque usando um Comparator personalizado.
-<p>
 
 ---
 ### Dúvidas e Suporte

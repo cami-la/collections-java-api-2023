@@ -23,7 +23,7 @@
 
 [2] "Java™ Platform, Standard Edition 17 API Specification - Class Set." Oracle. Disponível em: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html.
 
-# Fixando os Conhecimentos
+## Fixando os Conhecimentos
 
 Exercícios:
 
@@ -42,17 +42,7 @@ Exercícios:
 - `exibirAlunos()`: Exibe todos os alunos do conjunto.
 </p>
 
-### 2. Conjunto de Números Primos
-<p>
-Crie uma classe chamada "ConjuntoNumerosPrimos" que possui um conjunto de números inteiros primos como atributo. Implemente os seguintes métodos:
-
-- `adicionarNumeroPrimo(int numero)`: Adiciona um número primo ao conjunto.
-- `removerNumeroPrimo(int numero)`: Remove um número primo do conjunto.
-- `verificarNumeroPrimo(int numero)`: Verifica se um número está presente no conjunto de números primos.
-- `exibirNumerosPrimos()`: Exibe todos os números primos do conjunto.
-</p>
-
-### 3. Conjunto de Palavras Únicas
+### 2. Conjunto de Palavras Únicas
 <p>
 Crie uma classe chamada "ConjuntoPalavrasUnicas" que possui um conjunto de palavras únicas como atributo. Implemente os seguintes métodos:
 
@@ -94,19 +84,6 @@ Crie uma classe chamada "ListaTarefas" que possui um conjunto de objetos do tipo
 - `limparListaTarefas()`: Remove todas as tarefas da lista.
 </p>
 
-### 3. Lista de Compras
-<p>
-Crie uma classe chamada "ListaCompras" que possui um conjunto de objetos do tipo "Item" e quantidade como atributos. Cada item possui atributos como nome e valor. Implemente os seguintes métodos:
-
-- `adicionarItem(Item item)`: Adiciona um item à lista de compras.
-- `removerItem(Item item)`: Remove um item da lista de compras, se estiver presente.
-- `exibirItens()`: Exibe todos os itens da lista de compras.
-- `pesquisarPorNome(String nome)`: Pesquisa itens pelo nome e retorna uma lista com os itens encontrados.
-- `contarItens()`: Conta o número total de itens na lista de compras.
-- `obterValorTotal()`: Calcula e retorna o valor total de todos os itens da lista.
-- `atualizarQuantidadeItem(Item item, int quantidade)`: Atualiza a quantidade de um item específico.
-</p>
-
 ---
 
 ## Ordenação em Set
@@ -122,24 +99,15 @@ Crie uma classe chamada "CadastroProdutos" que possui um conjunto de objetos do 
 - `exibirProdutosPorQuantidade()`: Exibe todos os produtos do cadastro em ordem decrescente de quantidade.
 </p>
 
-### 2. Lista de Tarefas por Prioridade
+### 2. Lista de Alunos
 <p>
-Crie uma classe chamada "ListaTarefas" que possui um conjunto de objetos do tipo "Tarefa" como atributo. Cada tarefa possui atributos como descrição e prioridade. Implemente os seguintes métodos:
-
-- `adicionarTarefa(Tarefa tarefa)`: Adiciona uma tarefa à lista.
-- `removerTarefa(Tarefa tarefa)`: Remove uma tarefa da lista, se estiver presente.
-- `exibirTarefasPorDescricao()`: Exibe todas as tarefas da lista em ordem alfabética pela descrição.
-- `exibirTarefasPorPrioridade()`: Exibe todas as tarefas da lista em ordem crescente de prioridade.
-</p>
-
-### 3.  Lista de Alunos por Nota
-<p>
-Crie uma classe chamada "ListaAlunos" que possui um conjunto de objetos do tipo "Aluno" como atributo. Cada aluno possui atributos como nome e nota. Implemente os seguintes métodos:
+Crie uma classe chamada "GerenciadorAlunos" que irá lidar com uma lista de alunos. Cada aluno terá atributos como nome, matrícula e nota. Implementaremos os seguintes métodos:
 
 - `adicionarAluno(Aluno aluno)`: Adiciona um aluno à lista.
 - `removerAluno(Aluno aluno)`: Remove um aluno da lista, se estiver presente.
 - `exibirAlunosPorNome()`: Exibe todos os alunos da lista em ordem alfabética pelo nome.
-- `exibirAlunosPorNota()`: Exibe todos os alunos da lista em ordem decrescente de nota.
+- `exibirAlunosPorNota()`: Exibe todos os alunos da lista em ordem crescente de nota.
+- `exibirAlunos()`: Exibe todos os alunos da lista.
 </p>
 
 ---

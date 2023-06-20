@@ -53,22 +53,12 @@ Crie uma classe chamada "Dicionario" que utilize um Map para armazenar palavras 
 - `pesquisarPorPalavra(String palavra)`: Pesquisa uma palavra no dicionário e retorna sua definição correspondente.
 </p>
 
-### 3. Estoque de Produtos
-<p>
-Crie uma classe chamada "EstoqueProdutos" que utilize um Map para armazenar produtos e suas quantidades em estoque. Cada produto possui um nome como chave e um valor inteiro representando a quantidade em estoque como valor. Implemente os seguintes métodos:
-
-- `adicionarProduto(String nome, int quantidade)`: Adiciona um produto ao estoque, juntamente com a quantidade disponível.
-- `removerProduto(String nome)`: Remove um produto do estoque, dado o nome do produto.
-- `exibirProdutos()`: Exibe todos os produtos e suas quantidades em estoque, mostrando o nome do produto seguido de sua quantidade disponível.
-- `pesquisarPorProduto(String nome)`: Pesquisa um produto no estoque e retorna a quantidade disponível correspondente.
-</p>
-
 ---
 
 ## Pesquisa em Map
 
 ### 1. Estoque de Produtos com Preço
-
+<p>
 Crie uma classe chamada "EstoqueProdutos" que utilize um Map para armazenar os produtos, suas quantidades em estoque e seus respectivos preços. Cada produto possui um nome como chave e um objeto Produto como valor, contendo quantidade e preço. Implemente os seguintes métodos:
 
 - `adicionarProduto(String nome, int quantidade, double preco)`: Adiciona um produto ao estoque, juntamente com a quantidade disponível e o preço.
@@ -78,6 +68,7 @@ Crie uma classe chamada "EstoqueProdutos" que utilize um Map para armazenar os p
 -  `obterProdutoMaisCaro()`: Retorna o produto mais caro do estoque, ou seja, aquele com o maior preço.
 - `obterProdutoMaisBarato()`: Retorna o produto mais barato do estoque, ou seja, aquele com o menor preço.
 - `obterProdutoMaiorQuantidadeValorTotalNoEstoque()`: Retorna o produto que está em maior quantidade no estoque, considerando o valor total de cada produto (quantidade * preço).
+</p>
 
 ### 2. Contagem de Palavras
 <p>
@@ -87,19 +78,6 @@ Crie uma classe chamada "ContagemPalavras" que utilize um Map para armazenar as 
 - `removerPalavra(String palavra)`: Remove uma palavra da contagem, se estiver presente.
 - `exibirContagemPalavras()`: Exibe todas as palavras e suas respectivas contagens.
 - `encontrarPalavraMaisFrequente()`: Encontra a palavra mais frequente no texto e retorna a palavra e sua contagem.
-</p>
-
-### 3. Controle de Alunos
-<p>
-Crie uma classe chamada "ControleAlunos" que utilize um `Map` para armazenar os alunos e suas respectivas notas. Cada aluno é representado por um objeto da classe "Aluno", que possui atributos como matrícula, nome e uma lista de notas. Implemente os seguintes métodos:
-
-- `adicionarAluno(Aluno aluno)`: Adiciona um aluno ao controle de alunos. A matrícula do aluno é utilizada como chave no Map.
-- `removerAluno(String matricula)`: Remove um aluno do controle, dado o número de matrícula.
-- `adicionarNota(String matricula, double nota)`: Adiciona uma nota ao aluno especificado, utilizando a matrícula como identificador.
-- `removerNota(String matricula, double nota)`: Remove uma nota do aluno especificado, utilizando a matrícula como identificador.
-- `exibirNotas(String matricula)`: Exibe todas as notas do aluno especificado, utilizando a matrícula como identificador.
-- `calcularMedia(String matricula)`: Calcula a média das notas do aluno especificado, utilizando a matrícula como identificador, e retorna o valor.
-- `exibirMelhorAluno()`: Encontra o aluno com a maior média e retorna seu nome, matrícula e média.
 </p>
 
 ---
@@ -117,17 +95,7 @@ Crie uma classe chamada "AgendaEventos" que utilize um `Map` para armazenar os e
 - `contarEventosNoMes(int mes, int ano)`: Retorna a quantidade de eventos que ocorreram em um determinado mês e ano.
 - `contarAtracoes(String nomeAtracao)`: Retorna a quantidade de vezes que uma determinada atração se apresentou em todos os eventos da agenda.
 
-### 2. Ranking de Alunos
-<p>
-Crie uma classe chamada "RankingAlunos" que utilize um Map para armazenar os alunos e suas respectivas notas. Cada aluno é representado por um objeto da classe "Aluno", que possui atributos como nome e nota. Implemente os seguintes métodos:
-
-- `adicionarAluno(Aluno aluno)`: Adiciona um aluno ao ranking.
-- `removerAluno(String nome)`: Remove um aluno do ranking, dado o nome do aluno.
-- `exibirRanking()`: Exibe o ranking dos alunos em ordem decrescente de nota.
-- `exibirMelhorAluno()`: Retorna o aluno com a maior nota.
-</p>
-
-### 3. Livraria Online
+### 2. Livraria Online
 <p>
 Crie uma classe chamada "LivrariaOnline" que representa uma livraria online. Essa classe utiliza um Map para armazenar os livros disponíveis na livraria, utilizando o ISBN (International Standard Book Number) como chave e um objeto da classe "Livro" como valor.
 
@@ -141,6 +109,7 @@ A classe "Livro" possui atributos como título, autor e preço. Através da clas
 - `exibirLivroMaisBarato()`: Retorna o livro mais barato disponível na livraria.
 </p>
 
+---
 ### Dúvidas e Suporte
 
 Caso você tenha alguma dúvida, problema ou sugestão, fique à vontade para abrir uma issue no repositório. Espero conseguir te ajudar! (:
