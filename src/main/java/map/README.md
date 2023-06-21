@@ -65,7 +65,7 @@ Crie uma classe chamada "EstoqueProdutos" que utilize um Map para armazenar os p
 - `removerProduto(String nome)`: Remove um produto do estoque, dado o nome do produto.
 - `exibirProdutos()`: Exibe todos os produtos, suas quantidades em estoque e preços.
 - `calcularValorTotalEstoque()`: Calcula e retorna o valor total do estoque, considerando a quantidade e o preço de cada produto.
--  `obterProdutoMaisCaro()`: Retorna o produto mais caro do estoque, ou seja, aquele com o maior preço.
+- `obterProdutoMaisCaro()`: Retorna o produto mais caro do estoque, ou seja, aquele com o maior preço.
 - `obterProdutoMaisBarato()`: Retorna o produto mais barato do estoque, ou seja, aquele com o menor preço.
 - `obterProdutoMaiorQuantidadeValorTotalNoEstoque()`: Retorna o produto que está em maior quantidade no estoque, considerando o valor total de cada produto (quantidade * preço).
 </p>
@@ -74,7 +74,7 @@ Crie uma classe chamada "EstoqueProdutos" que utilize um Map para armazenar os p
 <p>
 Crie uma classe chamada "ContagemPalavras" que utilize um Map para armazenar as palavras e a quantidade de vezes que cada palavra aparece em um texto. Implemente os seguintes métodos:
 
-- `adicionarPalavra(String palavra)`: Adiciona uma palavra à contagem.
+- `adicionarPalavra(String palavra, Integer contagem)`: Adiciona uma palavra à contagem.
 - `removerPalavra(String palavra)`: Remove uma palavra da contagem, se estiver presente.
 - `exibirContagemPalavras()`: Exibe todas as palavras e suas respectivas contagens.
 - `encontrarPalavraMaisFrequente()`: Encontra a palavra mais frequente no texto e retorna a palavra e sua contagem.
@@ -97,12 +97,12 @@ Crie uma classe chamada "AgendaEventos" que utilize um `Map` para armazenar os e
 
 ### 2. Livraria Online
 <p>
-Crie uma classe chamada "LivrariaOnline" que representa uma livraria online. Essa classe utiliza um Map para armazenar os livros disponíveis na livraria, utilizando o ISBN (International Standard Book Number) como chave e um objeto da classe "Livro" como valor.
+Crie uma classe chamada "LivrariaOnline" que representa uma livraria online. Essa classe utiliza um Map para armazenar os livros disponíveis na livraria, utilizando o link da obra na Amazon Marketplace como chave e um objeto da classe "Livro" como valor.
 
 A classe "Livro" possui atributos como título, autor e preço. Através da classe "LivrariaOnline", implemente os seguintes métodos:
 
 - `adicionarLivro(Livro livro)`: Adiciona um livro à livraria, utilizando o ISBN como chave no Map.
-- `removerLivro(String ISBN)`: Remove um livro da livraria, dado o ISBN do livro.
+- `removerLivro(String titulo)`: Remove um livro da livraria, dado o titulo do livro.
 - `exibirLivrosOrdenadosPorPreco()`: Exibe os livros da livraria em ordem crescente de preço.
 - `pesquisarLivrosPorAutor(String autor)`: Retorna uma lista de todos os livros escritos por um determinado autor.
 - `obterLivroMaisCaro()`: Retorna o livro mais caro disponível na livraria.

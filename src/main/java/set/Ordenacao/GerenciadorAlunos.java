@@ -20,6 +20,7 @@ public class GerenciadorAlunos {
       Aluno next = iterator.next();
       if (next.getMatricula() == matricula) {
         iterator.remove();
+        break;
       }
     }
   }

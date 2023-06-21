@@ -33,13 +33,13 @@ Exercícios:
 
 ## Operações Básicas com Set
 
-### 1. Conjunto de Alunos
-<p>Crie uma classe chamada "ConjuntoAlunos" que possui um conjunto de objetos do tipo "Aluno" como atributo. Cada aluno possui atributos como nome, idade e matrícula. Implemente os seguintes métodos:
+### 1. Conjunto de Convidados
+<p>Crie uma classe chamada "ConjuntoConvidados" que possui um conjunto de objetos do tipo "Convidado" como atributo. Cada convidado possui atributos como nome, idade e código do convite. Implemente os seguintes métodos:
 
-- `adicionarAluno(Aluno aluno)`: Adiciona um aluno ao conjunto.
-- `removerAlunoPorMatricula(String matricula)`: Remove um aluno do conjunto com base em sua matrícula.
-- `verificarAluno(Aluno aluno)`: Verifica se um aluno está presente no conjunto.
-- `exibirAlunos()`: Exibe todos os alunos do conjunto.
+- `adicionarConvidado(Convidado convidado)`: Adiciona um convidado ao conjunto.
+- `removerConvidadoPorCodigoConvite(String codigoConvite)`: Remove um convidado do conjunto com base no código do convite.
+- `verificarConvidado(Convidado convidado)`: Verifica se um convidado está presente no conjunto.
+- `exibirConvidados()`: Exibe todos os convidados do conjunto.
 </p>
 
 ### 2. Conjunto de Palavras Únicas
