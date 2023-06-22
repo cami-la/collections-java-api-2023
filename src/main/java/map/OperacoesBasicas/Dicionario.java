@@ -45,7 +45,6 @@ public class Dicionario {
     String definicaoUva = dicionario.pesquisarPorPalavra("uva");
     System.out.println("Definição da palavra 'uva': " + definicaoUva);
 
-
     // Remover uma palavra
     dicionario.removerPalavra("casa");
     System.out.println("Após remover a palavra 'casa':");

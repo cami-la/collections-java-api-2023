@@ -18,12 +18,13 @@ public class CarrinhoDeCompras {
 	}
 
 	public void removerItem(String nome) {
-		Iterator<Item> iterator = itens.iterator();
-		while (iterator.hasNext()) {
-			Item next = iterator.next();
-			if(next.getNome().equalsIgnoreCase(nome))
-				iterator.remove();
+		List<Item> itensParaRemover = new ArrayList<>();
+		for(Item i : itens) {
+			if(i.getNome().equalsIgnoreCase(nome)) {
+				itensParaRemover.add(i);
+			}
 		}
+		itens.removeAll(itensParaRemover);
 	}
 
 	public double calcularValorTotal() {
@@ -53,7 +54,7 @@ public class CarrinhoDeCompras {
 		carrinhoDeCompras.adicionarItem("Caderno", 35d, 1);
 		carrinhoDeCompras.adicionarItem("Borracha", 2d, 2);
 		carrinhoDeCompras.exibirItens();
-		carrinhoDeCompras.removerItem("caderno");
+		carrinhoDeCompras.removerItem("Lápis");
 		carrinhoDeCompras.exibirItens();
 		System.out.println("O valor total da compra é = " + carrinhoDeCompras.calcularValorTotal());
 	}
