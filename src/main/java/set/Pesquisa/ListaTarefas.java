@@ -1,7 +1,6 @@
 package main.java.set.Pesquisa;
 
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Set;
 
 public class ListaTarefas {
@@ -17,13 +16,14 @@ public class ListaTarefas {
   }
 
   public void removerTarefa(String descricao) {
-    Iterator<Tarefa> iterator = tarefas.iterator();
-    while (iterator.hasNext()) {
-      Tarefa next = iterator.next();
-      if (next.getDescricao().equalsIgnoreCase(descricao)) {
-        iterator.remove();
+    Tarefa tarefaParaRemover = null;
+    for(Tarefa t: tarefas) {
+      if (t.getDescricao().equalsIgnoreCase(descricao)) {
+        tarefaParaRemover = t;
+        break;
       }
     }
+    tarefas.remove(tarefaParaRemover);
   }
 
   public void exibirTarefas() {

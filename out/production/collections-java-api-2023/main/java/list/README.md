@@ -59,7 +59,7 @@ Cada item é representado por uma classe chamada "Item" que possui atributos com
 ### 1. Catálogo de Livros
 <p>Crie uma classe chamada "CatalogoLivros" que possui uma lista de objetos do tipo "Livro" como atributo. Cada livro possui atributos como título, autor e ano de publicação. Implemente os seguintes métodos:
 
-- `adicionarLivro(Livro livro)`: Adiciona um livro ao catálogo.
+- `adicionarLivro(String titulo, String autor, int anoPublicacao)`: Adiciona um livro ao catálogo.
 - `pesquisarPorAutor(String autor)`: Pesquisa livros por autor e retorna uma lista com os livros encontrados.
 - `pesquisarPorIntervaloAnos(int anoInicial, int anoFinal)`: Pesquisa livros publicados em um determinado intervalo de anos e retorna uma lista com os livros encontrados.
 - `pesquisarPorTitulo(String titulo)`: Pesquisa livros por título e retorna o primeiro livro encontrado.
@@ -81,7 +81,7 @@ Cada item é representado por uma classe chamada "Item" que possui atributos com
 ### 1. Ordenação de Pessoas
 <p>Crie uma classe chamada "OrdenacaoPessoas" que possui uma lista de objetos do tipo "Pessoa" como atributo. Cada pessoa possui atributos como nome, idade e altura. Implemente os seguintes métodos:
 
-- `adicionarPessoa(Pessoa pessoa)`: Adiciona uma pessoa à lista.
+- `adicionarPessoa(String nome, int idade, double altura)`: Adiciona uma pessoa à lista.
 - `ordenarPorIdade()`: Ordena as pessoas da lista por idade usando a interface Comparable.
 - `ordenarPorAltura()`: Ordena as pessoas da lista por altura usando um Comparator personalizado.
 </p>
