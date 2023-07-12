@@ -37,7 +37,7 @@ Exercícios:
 <p>
 Crie uma classe chamada "AgendaContatos" que utilize um Map para armazenar os contatos. Cada contato possui um nome como chave e um número de telefone como valor. Implemente os seguintes métodos:
 
-- `adicionarContato(String nome, String telefone)`: Adiciona um contato à agenda, associando o nome do contato ao número de telefone correspondente.
+- `adicionarContato(String nome, Integer telefone)`: Adiciona um contato à agenda, associando o nome do contato ao número de telefone correspondente.
 - `removerContato(String nome)`: Remove um contato da agenda, dado o nome do contato.
 - `exibirContatos()`: Exibe todos os contatos da agenda, mostrando o nome e o número de telefone de cada contato.
 - `pesquisarPorNome(String nome)`: Pesquisa um contato pelo nome e retorna o número de telefone correspondente.
@@ -59,10 +59,9 @@ Crie uma classe chamada "Dicionario" que utilize um Map para armazenar palavras 
 
 ### 1. Estoque de Produtos com Preço
 <p>
-Crie uma classe chamada "EstoqueProdutos" que utilize um Map para armazenar os produtos, suas quantidades em estoque e seus respectivos preços. Cada produto possui um nome como chave e um objeto Produto como valor, contendo quantidade e preço. Implemente os seguintes métodos:
+Crie uma classe chamada "EstoqueProdutos" que utilize um Map para armazenar os produtos, suas quantidades em estoque e seus respectivos preços. Cada produto possui um código como chave e um objeto Produto como valor, contendo nome, quantidade e preço. Implemente os seguintes métodos:
 
-- `adicionarProduto(String nome, int quantidade, double preco)`: Adiciona um produto ao estoque, juntamente com a quantidade disponível e o preço.
-- `removerProduto(String nome)`: Remove um produto do estoque, dado o nome do produto.
+- `adicionarProduto(long cod, String nome, int quantidade, double preco)`: Adiciona um produto ao estoque, juntamente com a quantidade disponível e o preço.
 - `exibirProdutos()`: Exibe todos os produtos, suas quantidades em estoque e preços.
 - `calcularValorTotalEstoque()`: Calcula e retorna o valor total do estoque, considerando a quantidade e o preço de cada produto.
 - `obterProdutoMaisCaro()`: Retorna o produto mais caro do estoque, ou seja, aquele com o maior preço.
@@ -86,14 +85,11 @@ Crie uma classe chamada "ContagemPalavras" que utilize um Map para armazenar as 
 
 ### 1. Agenda de Eventos
 
-Crie uma classe chamada "AgendaEventos" que utilize um `Map` para armazenar os eventos e suas respectivas datas. Cada evento é representado por um objeto da classe "Evento", que possui atributos como nome e uma lista de atrações. Implemente os seguintes métodos:
+Crie uma classe chamada "AgendaEventos" que utilize um `Map` para armazenar as datas e seus respectivos Eventos. Cada evento é representado por um objeto da classe "Evento", que possui atributos como nome do evento e o nome da atração. Implemente os seguintes métodos:
 
-- `adicionarEvento(Evento evento)`: Adiciona um evento à agenda.
-- `removerEvento(String nome)`: Remove um evento da agenda, dado o nome do evento.
+- `adicionarEvento(LocalDate data, String nome, String atracao)`: Adiciona um evento à agenda.
 - `exibirAgenda()`: Exibe a agenda de eventos em ordem crescente de data.
 - `obterProximoEvento()`: Retorna o próximo evento que ocorrerá.
-- `contarEventosNoMes(int mes, int ano)`: Retorna a quantidade de eventos que ocorreram em um determinado mês e ano.
-- `contarAtracoes(String nomeAtracao)`: Retorna a quantidade de vezes que uma determinada atração se apresentou em todos os eventos da agenda.
 
 ### 2. Livraria Online
 <p>

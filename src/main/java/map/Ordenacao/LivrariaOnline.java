@@ -49,7 +49,7 @@ public class LivrariaOnline {
 
   public Livro obterLivroMaisCaro() {
     Livro livroMaisCaro = null;
-    double precoMaisAlto = Double.NEGATIVE_INFINITY;
+    double precoMaisAlto = -1;
     for (Map.Entry<String, Livro> entry : livros.entrySet()) {
       Livro livro = entry.getValue();
       if (livro.getPreco() > precoMaisAlto) {
@@ -62,7 +62,7 @@ public class LivrariaOnline {
 
   public Livro exibirLivroMaisBarato() {
     Livro livroMaisCaro = null;
-    double precoMaisBaixo = Double.POSITIVE_INFINITY;
+    double precoMaisBaixo = -1;
     for (Map.Entry<String, Livro> entry : livros.entrySet()) {
       Livro livro = entry.getValue();
       if (livro.getPreco() < precoMaisBaixo) {
