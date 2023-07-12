@@ -48,6 +48,7 @@ public class AgendaContatos {
 
     agendaContatos.adicionarContato("Camila", 123456);
     agendaContatos.adicionarContato("Camila", 5665);
+    agendaContatos.adicionarContato("Camila", 5665);
     agendaContatos.adicionarContato("Camila Cavalcante", 1111111);
     agendaContatos.adicionarContato("Camila DIO", 654987);
     agendaContatos.adicionarContato("Maria Silva", 1111111);
