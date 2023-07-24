@@ -5,33 +5,41 @@ import java.util.Set;
 
 public class ConjuntoConvidados {
   //atributo
-  private Set<Convidado> convidadoSet;
+  private Set<Convidado> convidadosSet;
 
   public ConjuntoConvidados() {
-    this.convidadoSet = new HashSet<>();
+    this.convidadosSet = new HashSet<>();
   }
 
   public void adicionarConvidado(String nome, int codigoConvite) {
-    convidadoSet.add(new Convidado(nome, codigoConvite));
+    convidadosSet.add(new Convidado(nome, codigoConvite));
   }
 
   public void removerConvidadoPorCodigoConvite(int codigoConvite) {
     Convidado convidadoParaRemover = null;
-    for (Convidado c : convidadoSet) {
-      if (c.getCodigoConvite() == codigoConvite) {
-        convidadoParaRemover = c;
-        break;
+    if (!convidadosSet.isEmpty()) {
+      for (Convidado c : convidadosSet) {
+        if (c.getCodigoConvite() == codigoConvite) {
+          convidadoParaRemover = c;
+          break;
+        }
       }
+      convidadosSet.remove(convidadoParaRemover);
+    } else {
+      throw new RuntimeException("O conjunto está vazio!");
     }
-    convidadoSet.remove(convidadoParaRemover);
   }
 
   public int contarConvidados() {
-    return convidadoSet.size();
+    return convidadosSet.size();
   }
 
   public void exibirConvidados() {
-    System.out.println(convidadoSet);
+    if (!convidadosSet.isEmpty()) {
+      System.out.println(convidadosSet);
+    } else {
+      System.out.println("O conjunto está vazio!");
+    }
   }
 
   public static void main(String[] args) {
@@ -45,11 +53,11 @@ public class ConjuntoConvidados {
 
     conjuntoConvidados.exibirConvidados();
 
-    /*System.out.println("Existem " + conjuntoConvidados.contarConvidados() + " convidado(s) dentro do Set de Convidados");
+    System.out.println("Existem " + conjuntoConvidados.contarConvidados() + " convidado(s) dentro do Set de Convidados");
 
     conjuntoConvidados.removerConvidadoPorCodigoConvite(1236);
     System.out.println("Existem " + conjuntoConvidados.contarConvidados() + " convidado(s) dentro do Set de Convidados");
 
-    conjuntoConvidados.exibirConvidados();*/
+    conjuntoConvidados.exibirConvidados();
   }
 }

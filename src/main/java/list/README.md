@@ -1,4 +1,4 @@
-# List
+# List Interface
 
 <p align="center">
 <img src="../../../../assets/image/list-interface-hierarchy.png" alt="List interface hierarchy Java"><br>
@@ -28,8 +28,8 @@
 Exercícios:
 
 1. Operações Básicas com List
-3. Pesquisa em List
-4. Ordenação nas List
+2. Pesquisa em List
+3. Ordenação nas List
 
 ## Operações Básicas com List
 
@@ -72,7 +72,7 @@ Cada item é representado por uma classe chamada "Item" que possui atributos com
 - `calcularSoma()`: Calcula a soma de todos os números na lista e retorna o resultado.
 - `encontrarMaiorNumero()`: Encontra o maior número na lista e retorna o valor.
 - `encontrarMenorNumero()`: Encontra o menor número na lista e retorna o valor.
-- `exibirNumeros()`: Retorna uma lista contendo todos os numeros presentes na lista.
+- `exibirNumeros()`: Retorna uma lista contendo todos os números presentes na lista.
 
 -------
 

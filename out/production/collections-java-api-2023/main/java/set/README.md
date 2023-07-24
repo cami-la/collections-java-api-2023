@@ -70,15 +70,15 @@ Crie uma classe chamada "AgendaContatos" que possui um conjunto de objetos do ti
 <p>
 Crie uma classe chamada "ListaTarefas" que possui um conjunto de objetos do tipo "Tarefa" como atributo. Cada tarefa possui um atributo de descrição e um atributo booleano para indicar se a tarefa foi concluída ou não. Implemente os seguintes métodos:
 
-- `adicionarTarefa(Tarefa tarefa)`: Adiciona uma nova tarefa à lista.
-- `removerTarefa(Tarefa tarefa)`: Remove uma tarefa da lista, se estiver presente.
-- `exibirTarefas()`: Exibe todas as tarefas da lista.
-- `contarTarefas()`: Conta o número total de tarefas na lista.
-- `obterTarefasConcluidas()`: Retorna uma lista com as tarefas concluídas.
-- `obterTarefasPendentes()`: Retorna uma lista com as tarefas pendentes.
+- `adicionarTarefa(Tarefa tarefa)`: Adiciona uma nova tarefa ao Set.
+- `removerTarefa(Tarefa tarefa)`: Remove uma tarefa do Set, se estiver presente.
+- `exibirTarefas()`: Exibe todas as tarefas da lista de tarefas.
+- `contarTarefas()`: Conta o número total de tarefas na lista de tarefas.
+- `obterTarefasConcluidas()`: Retorna um Set com as tarefas concluídas.
+- `obterTarefasPendentes()`: Retorna um Set com as tarefas pendentes.
 - `marcarTarefaConcluida(Tarefa tarefa)`: Marca uma tarefa como concluída.
 - `marcarTarefaPendente(Tarefa tarefa)`: Marca uma tarefa como pendente.
-- `limparListaTarefas()`: Remove todas as tarefas da lista.
+- `limparListaTarefas()`: Remove todas as tarefas da lista de tarefas.
 </p>
 
 ---
@@ -98,11 +98,11 @@ Crie uma classe chamada "CadastroProdutos" que possui um conjunto de objetos do 
 <p>
 Crie uma classe chamada "GerenciadorAlunos" que irá lidar com uma lista de alunos. Cada aluno terá atributos como nome, matrícula e nota. Implementaremos os seguintes métodos:
 
-- `adicionarAluno(Aluno aluno)`: Adiciona um aluno à lista.
-- `removerAluno(Aluno aluno)`: Remove um aluno da lista, se estiver presente.
-- `exibirAlunosPorNome()`: Exibe todos os alunos da lista em ordem alfabética pelo nome.
-- `exibirAlunosPorNota()`: Exibe todos os alunos da lista em ordem crescente de nota.
-- `exibirAlunos()`: Exibe todos os alunos da lista.
+- `adicionarAluno(String nome, Long matricula, double media)`: Adiciona um aluno ao conjunto.
+- `removerAluno(long matricula)`: Remove um aluno ao conjunto a partir da matricula, se estiver presente.
+- `exibirAlunosPorNome()`: Exibe todos os alunos do conjunto em ordem alfabética pelo nome.
+- `exibirAlunosPorNota()`: Exibe todos os alunos do conjunto em ordem crescente de nota.
+- `exibirAlunos()`: Exibe todos os alunos do conjunto.
 </p>
 
 ---
