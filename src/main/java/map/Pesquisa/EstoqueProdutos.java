@@ -42,18 +42,34 @@ public class EstoqueProdutos {
     return produtoMaisCaro;
   }
 
+  public Produto obterProdutoMaiorQuantidadeValorTotalNoEstoque() {
+    Produto produtoMaiorQuantidadeValorNoEstoque = null;
+    double maiorValorTotalProdutoEstoque = 0d;
+    if (!estoqueProdutosMap.isEmpty()) {
+      for (Map.Entry<Long, Produto> entry : estoqueProdutosMap.entrySet()) {
+        double valorProdutoEmEstoque = entry.getValue().getPreco() * entry.getValue().getQuantidade();
+        if (valorProdutoEmEstoque > maiorValorTotalProdutoEstoque) {
+          maiorValorTotalProdutoEstoque = valorProdutoEmEstoque;
+          produtoMaiorQuantidadeValorNoEstoque = entry.getValue();
+        }
+      }
+    }
+    return produtoMaiorQuantidadeValorNoEstoque;
+  }
+
   public static void main(String[] args) {
     EstoqueProdutos estoque = new EstoqueProdutos();
     estoque.exibirProdutos();
 
-    estoque.adicionarProduto(1L, "Produto A", 10, 5.0);
-    estoque.adicionarProduto(2L, "Produto B", 5, 10.0);
-    estoque.adicionarProduto(3L, "Produto C", 2, 15.0);
-    estoque.adicionarProduto(8L, "Produto D", 2, 20.0);
+    estoque.adicionarProduto(1L, "Produto A", 1, 5.0);
+    estoque.adicionarProduto(2L, "Produto B", 5, 11.0);
+    estoque.adicionarProduto(3L, "Produto C", 3, 15.0);
+    estoque.adicionarProduto(8L, "Produto D", 2, 23.0);
 
     estoque.exibirProdutos();
 
     System.out.println("Valor total do estoque: R$" + estoque.calcularValorTotalEstoque());
     System.out.println("Produto mais caro: " + estoque.obterProdutoMaisCaro());
+    System.out.println("Produto com maior quantidade em valor no estoque: " + estoque.obterProdutoMaiorQuantidadeValorTotalNoEstoque());
   }
 }
