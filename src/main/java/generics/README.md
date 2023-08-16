@@ -14,7 +14,7 @@ public class Box {
 ```
 
 -  O símbolo `<>` é chamado de "diamond" ou "diamond operator" foi um recurso introduzido no Java 7 e é usado no contexto de tipos genéricos em Java para inferir automaticamente o tipo com base no contexto.
-- Para atualizar a classe Box para usar generics, você cria uma declaração de tipo genérico alterando o código "public class Box" para "public class Box<T>".
+- Para atualizar a classe Box para usar generics, você cria uma declaração de tipo genérico alterando o código `public class Box` para `public class Box<T>`.
 - Isso introduz a variável de tipo, T, que pode ser usada em qualquer lugar dentro da classe:
 
 

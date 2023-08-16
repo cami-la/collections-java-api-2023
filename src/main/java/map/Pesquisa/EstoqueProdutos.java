@@ -60,9 +60,10 @@ public class EstoqueProdutos {
     EstoqueProdutos estoque = new EstoqueProdutos();
     estoque.exibirProdutos();
 
-    estoque.adicionarProduto(1L, "Produto A", 1, 5.0);
+    estoque.adicionarProduto(1L, "Produto A", 1, 50.0);
     estoque.adicionarProduto(2L, "Produto B", 5, 11.0);
     estoque.adicionarProduto(3L, "Produto C", 3, 10.0);
+    estoque.adicionarProduto(3L, "Produto D", 2, 4.0);
 
     estoque.exibirProdutos();
 
