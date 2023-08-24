@@ -28,10 +28,10 @@ public class OrdenacaoNumeros {
   }
 
   public List<Integer> ordenarDescendente() {
-    List<Integer> numerosAscendente = new ArrayList<>(this.numerosList);
+    List<Integer> numerosDescendente = new ArrayList<>(this.numerosList);
     if (!numerosList.isEmpty()) {
-      numerosAscendente.sort(Collections.reverseOrder());
-      return numerosAscendente;
+      numerosDescendente.sort(Collections.reverseOrder());
+      return numerosDescendente;
     } else {
       throw new RuntimeException("A lista está vazia!");
     }
