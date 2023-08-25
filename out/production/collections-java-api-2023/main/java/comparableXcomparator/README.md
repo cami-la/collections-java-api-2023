@@ -63,14 +63,16 @@ class Livro implements Comparable<Livro> {
 
 // Classe para comparar Livro por autor
 class CompararAutor implements Comparator<Livro> {
-	public int compare(Livro l1, Livro l2) {
+  @Override
+  public int compare(Livro l1, Livro l2) {
 		return l1.getAutor().compareTo(l2.getAutor());
 	}
 }
 
 // Classe para comparar Livro por ano
 class CompararAno implements Comparator<Livro> {
-	public int compare(Livro l1, Livro l2) {
+  @Override
+  public int compare(Livro l1, Livro l2) {
 		if (l1.getAno() < l2.getAno())
 			return -1;
 		if (l1.getAno() > l2.getAno())
@@ -81,7 +83,6 @@ class CompararAno implements Comparator<Livro> {
 }
 
 class CompararAnoAutorTitulo implements Comparator<Livro> {
-
 	@Override
 	public int compare(Livro l1, Livro l2) {
 		int ano = Integer.compare(l1.getAno(), l2.getAno());
@@ -97,6 +98,7 @@ class CompararAnoAutorTitulo implements Comparator<Livro> {
 ---
 
 ### Livros citados:
+
 - ✨ Entendendo Algoritmos: Um Guia Ilustrado Para Programadores e Outros Curiosos - https://amzn.to/3IVsZRM
 - ✨ Microsserviços Prontos Para a Produção: Construindo Sistemas Padronizados em uma Organização de Engenharia de Software - https://amzn.to/3oOUkyb
 - ✨ Java - Guia do Programador: Atualizado Para Java 16 - https://amzn.to/3oJPanf
@@ -104,6 +106,7 @@ class CompararAnoAutorTitulo implements Comparator<Livro> {
 - ✨ Kotlin em ação - https://amzn.to/3MFyncM
 
 ---
+
 ### Referências:
 
 [1] "Comparable vs Comparator in Java." GeeksforGeeks. Disponível em: https://www.geeksforgeeks.org/comparable-vs-comparator-in-java/.
@@ -113,6 +116,7 @@ class CompararAnoAutorTitulo implements Comparator<Livro> {
 [3] "Java™ Platform, Standard Edition 17 API Specification - Class Collections." Oracle. Disponível em: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collections.html.
 
 ---
+
 ### Dúvidas e Suporte
 
 Caso você tenha alguma dúvida, problema ou sugestão, fique à vontade para abrir uma issue no repositório. Espero conseguir te ajudar! (:
