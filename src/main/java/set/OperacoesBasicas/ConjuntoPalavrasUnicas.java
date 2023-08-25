@@ -36,21 +36,32 @@ public class ConjuntoPalavrasUnicas {
   }
 
   public static void main(String[] args) {
-    ConjuntoPalavrasUnicas conjuntoPalavrasUnicas = new ConjuntoPalavrasUnicas();
+    // Criando uma instância da classe ConjuntoPalavrasUnicas
+    ConjuntoPalavrasUnicas conjuntoLinguagens = new ConjuntoPalavrasUnicas();
 
-    conjuntoPalavrasUnicas.adicionarPalavra("Palavra 1");
-    conjuntoPalavrasUnicas.adicionarPalavra("Palavra 1");
-    conjuntoPalavrasUnicas.adicionarPalavra("Palavra 3");
-    conjuntoPalavrasUnicas.adicionarPalavra("Palavra 4");
-    conjuntoPalavrasUnicas.adicionarPalavra("Palavra 2");
-    conjuntoPalavrasUnicas.exibirPalavrasUnicas();
+    // Adicionando linguagens únicas ao conjunto
+    conjuntoLinguagens.adicionarPalavra("Java");
+    conjuntoLinguagens.adicionarPalavra("Python");
+    conjuntoLinguagens.adicionarPalavra("JavaScript");
+    conjuntoLinguagens.adicionarPalavra("Python");
+    conjuntoLinguagens.adicionarPalavra("C++");
+    conjuntoLinguagens.adicionarPalavra("Ruby");
 
-    conjuntoPalavrasUnicas.removerPalavra("Palavra 2");
-    conjuntoPalavrasUnicas.exibirPalavrasUnicas();
+    // Exibindo as linguagens únicas no conjunto
+    conjuntoLinguagens.exibirPalavrasUnicas();
 
-    conjuntoPalavrasUnicas.removerPalavra("Palavra 5");
-    System.out.println(conjuntoPalavrasUnicas.verificarPalavra("Palavra 2"));
+    // Removendo uma linguagem do conjunto
+    conjuntoLinguagens.removerPalavra("Python");
+    conjuntoLinguagens.exibirPalavrasUnicas();
 
-    conjuntoPalavrasUnicas.exibirPalavrasUnicas();
+    // Removendo uma linguagem inexistente
+    conjuntoLinguagens.removerPalavra("Swift");
+
+    // Verificando se uma linguagem está no conjunto
+    System.out.println("A linguagem 'Java' está no conjunto? " + conjuntoLinguagens.verificarPalavra("Java"));
+    System.out.println("A linguagem 'Python' está no conjunto? " + conjuntoLinguagens.verificarPalavra("Python"));
+
+    // Exibindo as linguagens únicas atualizadas no conjunto
+    conjuntoLinguagens.exibirPalavrasUnicas();
   }
 }
