@@ -31,6 +31,15 @@ public class Livro implements Comparable<Livro> {
   public int compareTo(Livro l) {
     return Double.compare(preco, l.getPreco());
   }
+
+  @Override
+  public String toString() {
+    return "Livro{" +
+        "titulo='" + titulo + '\'' +
+        ", autor='" + autor + '\'' +
+        ", preco=" + preco +
+        '}';
+  }
 }
 
 class ComparatorPorAutor implements Comparator<Map.Entry<String, Livro>> {

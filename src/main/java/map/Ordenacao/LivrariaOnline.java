@@ -6,7 +6,6 @@ import java.util.*;
  * @see "https://www.cblservicos.org.br/isbn/pesquisa/"
  */
 public class LivrariaOnline {
-  //atributos
   private Map<String, Livro> livros;
 
   public LivrariaOnline() {
@@ -18,66 +17,103 @@ public class LivrariaOnline {
   }
 
   public void removerLivro(String titulo) {
-    Livro livroRemovido = null;
+    List<String> chavesRemover = new ArrayList<>();
     for (Map.Entry<String, Livro> entry : livros.entrySet()) {
-      if (entry.getValue().getTitulo().equals(titulo)) {
-        livroRemovido = entry.getValue();
-        break;
+      if (entry.getValue().getTitulo().equalsIgnoreCase(titulo)) {
+        chavesRemover.add(entry.getKey());
       }
     }
-    if (livroRemovido != null) {
-      livros.remove(livroRemovido);
+    for (String chave : chavesRemover) {
+      livros.remove(chave);
     }
   }
+
   public Map<String, Livro> exibirLivrosOrdenadosPorPreco() {
     return new TreeMap<>(livros);
   }
 
   public Map<String, Livro> pesquisarLivrosPorAutor(String autor) {
-    Set<Map.Entry<String, Livro>> setLivrosPorAutor = new TreeSet<>(new ComparatorPorAutor());
-    for (Map.Entry<String, Livro> entry : livros.entrySet()) {
-      if (entry.getValue().getAutor().equals(autor)) {
-        setLivrosPorAutor.add(entry);
-      }
-    }
-    Map<String, Livro> LivrosPorAutor = new LinkedHashMap<>();
-    for (Map.Entry<String, Livro> entry : setLivrosPorAutor) {
-      LivrosPorAutor.put(entry.getKey(), entry.getValue());
-    }
-    return LivrosPorAutor;
-  }
-
-  public Livro obterLivroMaisCaro() {
-    Livro livroMaisCaro = null;
-    double precoMaisAlto = -1;
+    Map<String, Livro> livrosPorAutor = new LinkedHashMap<>();
     for (Map.Entry<String, Livro> entry : livros.entrySet()) {
       Livro livro = entry.getValue();
-      if (livro.getPreco() > precoMaisAlto) {
-        precoMaisAlto = livro.getPreco();
-        livroMaisCaro = livro;
+      if (livro.getAutor().equals(autor)) {
+        livrosPorAutor.put(entry.getKey(), livro);
       }
     }
-    return livroMaisCaro;
+    return livrosPorAutor;
   }
 
-  public Livro exibirLivroMaisBarato() {
-    Livro livroMaisCaro = null;
-    double precoMaisBaixo = -1;
-    for (Map.Entry<String, Livro> entry : livros.entrySet()) {
-      Livro livro = entry.getValue();
-      if (livro.getPreco() < precoMaisBaixo) {
-        precoMaisBaixo = livro.getPreco();
-        livroMaisCaro = livro;
+  public List<Livro> obterLivroMaisCaro() {
+    List<Livro> livrosMaisCaros = new ArrayList<>();
+    double precoMaisAlto = Double.MIN_VALUE;
+
+    if (!livros.isEmpty()) {
+      for (Livro livro : livros.values()) {
+        if (livro.getPreco() > precoMaisAlto) {
+          precoMaisAlto = livro.getPreco();
+        }
+      }
+    } else {
+      throw new NoSuchElementException("A livraria está vazia!");
+    }
+
+    for(Map.Entry<String, Livro> entry: livros.entrySet()) {
+      if(entry.getValue().getPreco() == precoMaisAlto) {
+        Livro livroComPrecoMaisAlto = livros.get(entry.getKey());
+        livrosMaisCaros.add(livroComPrecoMaisAlto);
       }
     }
-    return livroMaisCaro;
+    return livrosMaisCaros;
   }
 
+  public List<Livro> obterLivroMaisBarato() {
+    List<Livro> livrosMaisBaratos = new ArrayList<>();
+    double precoMaisBaixo = Double.MAX_VALUE;
+
+    if (!livros.isEmpty()) {
+      for (Livro livro : livros.values()) {
+        if (livro.getPreco() < precoMaisBaixo) {
+          precoMaisBaixo = livro.getPreco();
+        }
+      }
+    } else {
+      throw new NoSuchElementException("A livraria está vazia!");
+    }
+
+    for(Map.Entry<String, Livro> entry: livros.entrySet()) {
+      if(entry.getValue().getPreco() == precoMaisBaixo) {
+        Livro livroComPrecoMaisBaixo = livros.get(entry.getKey());
+        livrosMaisBaratos.add(livroComPrecoMaisBaixo);
+      }
+    }
+    return livrosMaisBaratos;
+  }
 
   public static void main(String[] args) {
     LivrariaOnline livrariaOnline = new LivrariaOnline();
-    livrariaOnline.adicionarLivro("https://amzn.to/3JjrxJl", new Livro("1984", "George Orwell",  19.60d));
-    livrariaOnline.adicionarLivro("https://amzn.to/3PmYFnb", new Livro("Caixa de Pássaros - Bird Box: Não Abra os Olhos", "Josh Malerman", 19.99d ));
-    livrariaOnline.adicionarLivro("https://amzn.to/43Sfzi0", new Livro("Assassinato no Expresso do Oriente", "Agatha Christie", 26.90d));
+    // Adiciona os livros à livraria online
+    livrariaOnline.adicionarLivro("https://amzn.to/3EclT8Z", new Livro("1984", "George Orwell", 50d));
+    livrariaOnline.adicionarLivro("https://amzn.to/47Umiun", new Livro("A Revolução dos Bichos", "George Orwell", 7.05d));
+    livrariaOnline.adicionarLivro("https://amzn.to/3L1FFI6", new Livro("Caixa de Pássaros - Bird Box: Não Abra os Olhos", "Josh Malerman", 19.99d));
+    livrariaOnline.adicionarLivro("https://amzn.to/3OYb9jk", new Livro("Malorie", "Josh Malerman", 5d));
+    livrariaOnline.adicionarLivro("https://amzn.to/45HQE1L", new Livro("E Não Sobrou Nenhum", "Agatha Christie", 50d));
+    livrariaOnline.adicionarLivro("https://amzn.to/45u86q4", new Livro("Assassinato no Expresso do Oriente", "Agatha Christie", 5d));
+
+    // Exibe todos os livros ordenados por preço
+    livrariaOnline.exibirLivrosOrdenadosPorPreco();
+
+    // Pesquisa livros por autor
+    String autorPesquisa = "Josh Malerman";
+    livrariaOnline.pesquisarLivrosPorAutor(autorPesquisa);
+
+    // Obtém e exibe o livro mais caro
+    System.out.println("Livro mais caro: " + livrariaOnline.obterLivroMaisCaro());
+
+    // Obtém e exibe o livro mais barato
+    System.out.println("Livro mais barato: " + livrariaOnline.obterLivroMaisBarato());
+
+    // Remover um livro pelo título
+    livrariaOnline.removerLivro("1984");
+    System.out.println(livrariaOnline.livros);
   }
 }

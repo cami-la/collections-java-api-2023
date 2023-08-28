@@ -34,6 +34,7 @@ Exercícios:
 ## Operações Básicas com Set
 
 ### 1. Conjunto de Convidados
+
 <p>Crie uma classe chamada "ConjuntoConvidados" que possui um conjunto de objetos do tipo "Convidado" como atributo. Cada convidado possui atributos como nome e código do convite. Implemente os seguintes métodos:
 
 - `adicionarConvidado(String nome, int codigoConvite)`: Adiciona um convidado ao conjunto.
@@ -43,6 +44,7 @@ Exercícios:
 </p>
 
 ### 2. Conjunto de Palavras Únicas
+
 <p>
 Crie uma classe chamada "ConjuntoPalavrasUnicas" que possui um conjunto de palavras únicas como atributo. Implemente os seguintes métodos:
 
@@ -57,6 +59,7 @@ Crie uma classe chamada "ConjuntoPalavrasUnicas" que possui um conjunto de palav
 ## Pesquisa em Set
 
 ### 1. Agenda de Contatos
+
 <p>
 Crie uma classe chamada "AgendaContatos" que possui um conjunto de objetos do tipo "Contato" como atributo. Cada contato possui atributos como nome e número de telefone. Implemente os seguintes métodos:
 
@@ -67,17 +70,18 @@ Crie uma classe chamada "AgendaContatos" que possui um conjunto de objetos do ti
 </p>
 
 ### 2. Lista de Tarefas
+
 <p>
 Crie uma classe chamada "ListaTarefas" que possui um conjunto de objetos do tipo "Tarefa" como atributo. Cada tarefa possui um atributo de descrição e um atributo booleano para indicar se a tarefa foi concluída ou não. Implemente os seguintes métodos:
 
-- `adicionarTarefa(Tarefa tarefa)`: Adiciona uma nova tarefa ao Set.
-- `removerTarefa(Tarefa tarefa)`: Remove uma tarefa do Set, se estiver presente.
+- `adicionarTarefa(String descricao)`: Adiciona uma nova tarefa ao Set.
+- `removerTarefa(String descricao)`: Remove uma tarefa do Set de acordo com a descrição, se estiver presente. 
 - `exibirTarefas()`: Exibe todas as tarefas da lista de tarefas.
 - `contarTarefas()`: Conta o número total de tarefas na lista de tarefas.
 - `obterTarefasConcluidas()`: Retorna um Set com as tarefas concluídas.
 - `obterTarefasPendentes()`: Retorna um Set com as tarefas pendentes.
-- `marcarTarefaConcluida(Tarefa tarefa)`: Marca uma tarefa como concluída.
-- `marcarTarefaPendente(Tarefa tarefa)`: Marca uma tarefa como pendente.
+- `marcarTarefaConcluida(String descricao)`: Marca uma tarefa como concluída de acordo com a descrição.
+- `marcarTarefaPendente(String descricao)`: Marca uma tarefa como pendente de acordo com a descrição.
 - `limparListaTarefas()`: Remove todas as tarefas da lista de tarefas.
 </p>
 
@@ -86,6 +90,7 @@ Crie uma classe chamada "ListaTarefas" que possui um conjunto de objetos do tipo
 ## Ordenação em Set
 
 ### 1. Cadastro de Produtos
+
 <p>
 Crie uma classe chamada "CadastroProdutos" que possui um conjunto de objetos do tipo "Produto" como atributo. Cada produto possui atributos como nome, cod, preço e quantidade. Implemente os seguintes métodos:
 
@@ -95,6 +100,7 @@ Crie uma classe chamada "CadastroProdutos" que possui um conjunto de objetos do 
 </p>
 
 ### 2. Lista de Alunos
+
 <p>
 Crie uma classe chamada "GerenciadorAlunos" que irá lidar com uma lista de alunos. Cada aluno terá atributos como nome, matrícula e nota. Implementaremos os seguintes métodos:
 

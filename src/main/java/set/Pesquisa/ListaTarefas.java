@@ -11,8 +11,8 @@ public class ListaTarefas {
     this.tarefasSet = new HashSet<>();
   }
 
-  public void adicionarTarefa(Tarefa tarefa) {
-    tarefasSet.add(tarefa);
+  public void adicionarTarefa(String descricao) {
+    tarefasSet.add(new Tarefa(descricao));
   }
 
   public void removerTarefa(String descricao) {
@@ -85,7 +85,6 @@ public class ListaTarefas {
 
     if (tarefaParaMarcarComoPendente != null) {
       tarefaParaMarcarComoPendente.setConcluida(true);
-      System.out.println("Tarefa marcada como pendente: " + tarefaParaMarcarComoPendente.getDescricao());
     } else {
       System.out.println("Tarefa não encontrada na lista.");
     }
@@ -100,26 +99,41 @@ public class ListaTarefas {
   }
 
   public static void main(String[] args) {
+    // Criando uma instância da classe ListaTarefas
     ListaTarefas listaTarefas = new ListaTarefas();
 
-    listaTarefas.adicionarTarefa(new Tarefa("Tarefa 1", false));
-    listaTarefas.adicionarTarefa(new Tarefa("Tarefa 2", false));
-    listaTarefas.adicionarTarefa(new Tarefa("Tarefa 3", false));
-    listaTarefas.adicionarTarefa(new Tarefa("Tarefa 4", false));
+    // Adicionando tarefas à lista
+    listaTarefas.adicionarTarefa("Estudar Java");
+    listaTarefas.adicionarTarefa("Fazer exercícios físicos");
+    listaTarefas.adicionarTarefa("Ler livro");
+    listaTarefas.adicionarTarefa("Preparar apresentação");
+
+    // Exibindo as tarefas na lista
     listaTarefas.exibirTarefas();
 
-    listaTarefas.removerTarefa("Tarefa 55");
+    // Removendo uma tarefa
+    listaTarefas.removerTarefa("Fazer exercícios físicos");
     listaTarefas.exibirTarefas();
 
-    System.out.println("Existem " + listaTarefas.contarTarefas() + " na lista de tarefas.");
+    // Contando o número de tarefas na lista
+    System.out.println("Total de tarefas na lista: " + listaTarefas.contarTarefas());
 
+    // Obtendo tarefas concluídas
     System.out.println(listaTarefas.obterTarefasConcluidas());
 
+    // Obtendo tarefas pendentes
     System.out.println(listaTarefas.obterTarefasPendentes());
 
-    listaTarefas.marcarTarefaConcluida("Tarefa 2");
-    listaTarefas.marcarTarefaConcluida("Tarefa 1");
+    // Marcando tarefas como concluídas
+    listaTarefas.marcarTarefaConcluida("Ler livro");
+    listaTarefas.marcarTarefaConcluida("Estudar Java");
     listaTarefas.exibirTarefas();
+
+    // Marcando tarefas como pendentes
+    listaTarefas.marcarTarefaPendente("Estudar Java");
+    listaTarefas.exibirTarefas();
+
+    // Limpando a lista de tarefas
     listaTarefas.limparListaTarefas();
     listaTarefas.exibirTarefas();
   }

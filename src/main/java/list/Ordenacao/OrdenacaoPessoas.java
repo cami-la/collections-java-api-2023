@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class OrdenacaoPessoa {
+public class OrdenacaoPessoas {
   //atributo
   private List<Pessoa> pessoaList;
 
-  public OrdenacaoPessoa() {
+  public OrdenacaoPessoas() {
     this.pessoaList = new ArrayList<>();
   }
 
@@ -37,17 +37,22 @@ public class OrdenacaoPessoa {
   }
 
   public static void main(String[] args) {
-    OrdenacaoPessoa ordenacaoPessoa = new OrdenacaoPessoa();
+  // Criando uma instância da classe OrdenacaoPessoas
+    OrdenacaoPessoas ordenacaoPessoas = new OrdenacaoPessoas();
 
-    ordenacaoPessoa.adicionarPessoa("Nome 1", 20, 1.56);
-    ordenacaoPessoa.adicionarPessoa("Nome 2", 30, 1.80);
-    ordenacaoPessoa.adicionarPessoa("Nome 3", 25, 1.70);
-    ordenacaoPessoa.adicionarPessoa("Nome 4", 17, 1.56);
+    // Adicionando pessoas à lista
+    ordenacaoPessoas.adicionarPessoa("Alice", 20, 1.56);
+    ordenacaoPessoas.adicionarPessoa("Bob", 30, 1.80);
+    ordenacaoPessoas.adicionarPessoa("Charlie", 25, 1.70);
+    ordenacaoPessoas.adicionarPessoa("David", 17, 1.56);
 
-    System.out.println(ordenacaoPessoa.pessoaList);
+    // Exibindo a lista de pessoas adicionadas
+    System.out.println(ordenacaoPessoas.pessoaList);
 
-    System.out.println(ordenacaoPessoa.ordenarPorIdade());
+    // Ordenando e exibindo por idade
+    System.out.println(ordenacaoPessoas.ordenarPorIdade());
 
-    System.out.println(ordenacaoPessoa.ordenarPorAltura());
+    // Ordenando e exibindo por altura
+    System.out.println(ordenacaoPessoas.ordenarPorAltura());
   }
 }

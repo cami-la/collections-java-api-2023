@@ -7,9 +7,9 @@
 
 - A interface `Map` é usada para mapear dados na forma de chaves e valores.
 - O `Map` do Java é um objeto que mapeia chaves para valores.
-- Um `Map` não pode conter chaves duplicadas: cada chave pode mapear para no máximo um valor.
+- Um `Map` não pode conter chaves duplicadas: cada chave pode mapear no máximo um valor.
 - A plataforma Java possui três implementações gerais de `Map`: `HashMap`, `TreeMap` e `LinkedHashMap`.
-- As operações básicas do `Map` são: put (inserir), get (obter), containsKey (verificar se contém uma chave), containsValue (verificar se contém um valor), size (obter o tamanho) e isEmpty (verificar se está vazio).
+- As operações básicas do `Map` são: `put` (inserir ou atualizar), `get` (obter), `containsKey` (verificar se contém uma chave), `containsValue` (verificar se contém um valor), `size` (obter o tamanho) e `isEmpty` (verificar se está vazio).
 
 > ##### *HashTable* é uma implementação antiga da interface Map no Java que é sincronizada e thread-safe, tornando-a adequada para uso em ambientes concorrentes. Ela não permite chaves ou valores nulos e os elementos não são mantidos em uma ordem específica.
 
@@ -28,12 +28,13 @@
 Exercícios:
 
 1. Operações Básicas com Map
-3. Pesquisa em Map
-4. Ordenação nas Map
+2. Pesquisa em Map
+3. Ordenação nas Map
 
 ## Operações Básicas com Map
 
 ### 1. Agenda de Contatos
+
 <p>
 Crie uma classe chamada "AgendaContatos" que utilize um Map para armazenar os contatos. Cada contato possui um nome como chave e um número de telefone como valor. Implemente os seguintes métodos:
 
@@ -44,6 +45,7 @@ Crie uma classe chamada "AgendaContatos" que utilize um Map para armazenar os co
 </p>
 
 ### 2.  Dicionário
+
 <p>
 Crie uma classe chamada "Dicionario" que utilize um Map para armazenar palavras e suas respectivas definições. Implemente os seguintes métodos:
 
@@ -58,6 +60,7 @@ Crie uma classe chamada "Dicionario" que utilize um Map para armazenar palavras 
 ## Pesquisa em Map
 
 ### 1. Estoque de Produtos com Preço
+
 <p>
 Crie uma classe chamada "EstoqueProdutos" que utilize um Map para armazenar os produtos, suas quantidades em estoque e seus respectivos preços. Cada produto possui um código como chave e um objeto Produto como valor, contendo nome, quantidade e preço. Implemente os seguintes métodos:
 
@@ -70,6 +73,7 @@ Crie uma classe chamada "EstoqueProdutos" que utilize um Map para armazenar os p
 </p>
 
 ### 2. Contagem de Palavras
+
 <p>
 Crie uma classe chamada "ContagemPalavras" que utilize um Map para armazenar as palavras e a quantidade de vezes que cada palavra aparece em um texto. Implemente os seguintes métodos:
 
@@ -85,19 +89,20 @@ Crie uma classe chamada "ContagemPalavras" que utilize um Map para armazenar as 
 
 ### 1. Agenda de Eventos
 
+<p>
 Crie uma classe chamada "AgendaEventos" que utilize um `Map` para armazenar as datas e seus respectivos Eventos. Cada evento é representado por um objeto da classe "Evento", que possui atributos como nome do evento e o nome da atração. Implemente os seguintes métodos:
 
 - `adicionarEvento(LocalDate data, String nome, String atracao)`: Adiciona um evento à agenda.
 - `exibirAgenda()`: Exibe a agenda de eventos em ordem crescente de data.
 - `obterProximoEvento()`: Retorna o próximo evento que ocorrerá.
+</p>
 
 ### 2. Livraria Online
+
 <p>
-Crie uma classe chamada "LivrariaOnline" que representa uma livraria online. Essa classe utiliza um Map para armazenar os livros disponíveis na livraria, utilizando o link da obra na Amazon Marketplace como chave e um objeto da classe "Livro" como valor.
+Crie uma classe chamada "LivrariaOnline" que representa uma livraria online. Essa classe utiliza um Map para armazenar os livros disponíveis na livraria, utilizando o link da obra na Amazon Marketplace como chave e um objeto da classe "Livro" como valor. A classe "Livro" possui atributos como título, autor e preço. Através da classe "LivrariaOnline", implemente os seguintes métodos:
 
-A classe "Livro" possui atributos como título, autor e preço. Através da classe "LivrariaOnline", implemente os seguintes métodos:
-
-- `adicionarLivro(Livro livro)`: Adiciona um livro à livraria, utilizando o ISBN como chave no Map.
+- `adicionarLivro(String link, String titulo, String autor, private double preco)`: Adiciona um livro à livraria, utilizando o ISBN como chave no Map.
 - `removerLivro(String titulo)`: Remove um livro da livraria, dado o titulo do livro.
 - `exibirLivrosOrdenadosPorPreco()`: Exibe os livros da livraria em ordem crescente de preço.
 - `pesquisarLivrosPorAutor(String autor)`: Retorna uma lista de todos os livros escritos por um determinado autor.
@@ -106,6 +111,7 @@ A classe "Livro" possui atributos como título, autor e preço. Através da clas
 </p>
 
 ---
+
 ### Dúvidas e Suporte
 
 Caso você tenha alguma dúvida, problema ou sugestão, fique à vontade para abrir uma issue no repositório. Espero conseguir te ajudar! (:
