@@ -85,7 +85,6 @@ public class ListaTarefas {
 
     if (tarefaParaMarcarComoPendente != null) {
       tarefaParaMarcarComoPendente.setConcluida(true);
-      System.out.println("Tarefa marcada como pendente: " + tarefaParaMarcarComoPendente.getDescricao());
     } else {
       System.out.println("Tarefa não encontrada na lista.");
     }

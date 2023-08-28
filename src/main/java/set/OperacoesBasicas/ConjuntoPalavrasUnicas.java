@@ -16,8 +16,12 @@ public class ConjuntoPalavrasUnicas {
   }
 
   public void removerPalavra(String palavra) {
-    if(!palavrasUnicasSet.isEmpty()) {
-      palavrasUnicasSet.remove(palavra);
+    if (!palavrasUnicasSet.isEmpty()) {
+      if (palavrasUnicasSet.contains(palavra)) {
+        palavrasUnicasSet.remove(palavra);
+      } else {
+        System.out.println("Palavra não encontrada no conjunto!");
+      }
     } else {
       System.out.println("O conjunto está vazio!");
     }

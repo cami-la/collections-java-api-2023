@@ -11,37 +11,52 @@ public class ContagemPalavras {
     this.palavras = new HashMap<>();
   }
 
-  public void adicionarPalavra(String palavra, Integer contagem) {
-    palavras.put(palavra, contagem);
+  public void adicionarPalavras(String linguagem, Integer contagem) {
+    palavras.put(linguagem, contagem);
+  }
+
+  public void removerPalavra(String palavra) {
+    if (!palavras.isEmpty()) {
+      palavras.remove(palavra);
+    } else {
+      System.out.println("O Map está vazio.");
+    }
   }
 
   public int exibirContagemPalavras() {
     int contagemTotal = 0;
-    for (Map.Entry<String, Integer> entry : palavras.entrySet()) {
-      contagemTotal += entry.getValue();
+    for (int contagem : palavras.values()) {
+      contagemTotal += contagem;
     }
     return contagemTotal;
   }
 
-  public String encontrarPalavraMaisFrequente() {
-    String palavraMaisFrequente = null;
+  public String encontrarPalavrasMaisFrequente() {
+    String linguagemMaisFrequente = null;
     int maiorContagem = 0;
     for (Map.Entry<String, Integer> entry : palavras.entrySet()) {
-      if(entry.getValue() > maiorContagem) {
+      if (entry.getValue() > maiorContagem) {
         maiorContagem = entry.getValue();
-        palavraMaisFrequente = entry.getKey();
+        linguagemMaisFrequente = entry.getKey();
       }
     }
-    return palavraMaisFrequente;
+    return linguagemMaisFrequente;
   }
 
   public static void main(String[] args) {
-    ContagemPalavras contagemPalavras = new ContagemPalavras();
-    contagemPalavras.adicionarPalavra("Palavra 1", 2);
-    contagemPalavras.adicionarPalavra("Palavra 2", 8);
-    contagemPalavras.adicionarPalavra("Palavra 3", 1);
-    contagemPalavras.adicionarPalavra("Palavra 4", 6);
-    System.out.println("Existem " + contagemPalavras.exibirContagemPalavras() + " palavras.");
-    System.out.println("A palavra mais frequente é: " + contagemPalavras.encontrarPalavraMaisFrequente());
+    ContagemPalavras contagemLinguagens = new ContagemPalavras();
+
+    // Adiciona linguagens e suas contagens
+    contagemLinguagens.adicionarPalavras("Java", 2);
+    contagemLinguagens.adicionarPalavras("Python", 8);
+    contagemLinguagens.adicionarPalavras("JavaScript", 1);
+    contagemLinguagens.adicionarPalavras("C#", 6);
+
+    // Exibe a contagem total de linguagens
+    System.out.println("Existem " + contagemLinguagens.exibirContagemPalavras() + " palavras.");
+
+    // Encontra e exibe a linguagem mais frequente
+    String linguagemMaisFrequente = contagemLinguagens.encontrarPalavrasMaisFrequente();
+    System.out.println("A linguagem mais frequente é: " + linguagemMaisFrequente);
   }
 }
