@@ -2,9 +2,6 @@ package main.java.map.Ordenacao;
 
 import java.util.*;
 
-/**
- * @see "https://www.cblservicos.org.br/isbn/pesquisa/"
- */
 public class LivrariaOnline {
   private Map<String, Livro> livros;
 
@@ -29,7 +26,31 @@ public class LivrariaOnline {
   }
 
   public Map<String, Livro> exibirLivrosOrdenadosPorPreco() {
-    return new TreeMap<>(livros);
+    List<Map.Entry<String, Livro>> livrosParaOrdenarPorPreco = new ArrayList<>(livros.entrySet());
+
+    Collections.sort(livrosParaOrdenarPorPreco, new ComparatorPorPreco());
+
+    Map<String, Livro> livrosOrdenadosPorPreco = new LinkedHashMap<>();
+
+    for (Map.Entry<String, Livro> entry : livrosParaOrdenarPorPreco) {
+      livrosOrdenadosPorPreco.put(entry.getKey(), entry.getValue());
+    }
+
+    return livrosOrdenadosPorPreco;
+  }
+
+  public Map<String, Livro> exibirLivrosOrdenadosPorAutor() {
+    List<Map.Entry<String, Livro>> livrosParaOrdenarPorAutor = new ArrayList<>(livros.entrySet());
+
+    Collections.sort(livrosParaOrdenarPorAutor, new ComparatorPorAutor());
+
+    Map<String, Livro> livrosOrdenadosPorAutor = new LinkedHashMap<>();
+
+    for (Map.Entry<String, Livro> entry : livrosParaOrdenarPorAutor) {
+      livrosOrdenadosPorAutor.put(entry.getKey(), entry.getValue());
+    }
+
+    return livrosOrdenadosPorAutor;
   }
 
   public Map<String, Livro> pesquisarLivrosPorAutor(String autor) {
@@ -100,7 +121,10 @@ public class LivrariaOnline {
     livrariaOnline.adicionarLivro("https://amzn.to/45u86q4", new Livro("Assassinato no Expresso do Oriente", "Agatha Christie", 5d));
 
     // Exibe todos os livros ordenados por preço
-    livrariaOnline.exibirLivrosOrdenadosPorPreco();
+    System.out.println("Livros ordenados por preço: \n" + livrariaOnline.exibirLivrosOrdenadosPorPreco());
+
+    //Exibe todos os livros ordenados por autor
+    System.out.println("Livros ordenados por autor: \n" + livrariaOnline.exibirLivrosOrdenadosPorAutor());
 
     // Pesquisa livros por autor
     String autorPesquisa = "Josh Malerman";
@@ -115,5 +139,6 @@ public class LivrariaOnline {
     // Remover um livro pelo título
     livrariaOnline.removerLivro("1984");
     System.out.println(livrariaOnline.livros);
+
   }
 }
