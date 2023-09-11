@@ -46,7 +46,7 @@ public class CadastroProdutos {
     cadastroProdutos.adicionarProduto(4L, "Teclado", 50d, 15);
 
     // Exibindo todos os produtos no cadastro
-    System.out.println(cadastroProdutos.exibirProdutosPorNome());
+    System.out.println(cadastroProdutos.produtoSet);
 
     // Exibindo produtos ordenados por nome
     System.out.println(cadastroProdutos.exibirProdutosPorNome());
