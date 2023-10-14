@@ -36,7 +36,7 @@ public class AgendaContatos {
     if (!agendaContatoMap.isEmpty()) {
       numeroPorNome = agendaContatoMap.get(nome);
       if (numeroPorNome == null) {
-        System.out.println("Contato não encontrado na agenda.");
+        System.out.println("Contato1 não encontrado na agenda.");
       }
     } else {
       System.out.println("A agenda de contatos está vazia.");
