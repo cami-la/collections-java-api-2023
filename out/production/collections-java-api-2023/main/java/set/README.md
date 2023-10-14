@@ -61,12 +61,12 @@ Crie uma classe chamada "ConjuntoPalavrasUnicas" que possui um conjunto de palav
 ### 1. Agenda de Contatos
 
 <p>
-Crie uma classe chamada "AgendaContatos" que possui um conjunto de objetos do tipo "Contato" como atributo. Cada contato possui atributos como nome e número de telefone. Implemente os seguintes métodos:
+Crie uma classe chamada "AgendaContatos" que possui um conjunto de objetos do tipo "Contato" como atributo. Cada contato1 possui atributos como nome e número de telefone. Implemente os seguintes métodos:
 
-- `adicionarContato(String nome, int numero)`: Adiciona um contato à agenda.
+- `adicionarContato(String nome, int numero)`: Adiciona um contato1 à agenda.
 - `exibirContatos()`: Exibe todos os contatos da agenda.
 - `pesquisarPorNome(String nome)`: Pesquisa contatos pelo nome e retorna uma conjunto com os contatos encontrados.
-- `atualizarNumeroContato(String nome, int novoNumero)`: Atualiza o número de telefone de um contato específico.
+- `atualizarNumeroContato(String nome, int novoNumero)`: Atualiza o número de telefone de um contato1 específico.
 </p>
 
 ### 2. Lista de Tarefas
@@ -92,9 +92,9 @@ Crie uma classe chamada "ListaTarefas" que possui um conjunto de objetos do tipo
 ### 1. Cadastro de Produtos
 
 <p>
-Crie uma classe chamada "CadastroProdutos" que possui um conjunto de objetos do tipo "Produto" como atributo. Cada produto possui atributos como nome, cod, preço e quantidade. Implemente os seguintes métodos:
+Crie uma classe chamada "CadastroProdutos" que possui um conjunto de objetos do tipo "Produto" como atributo. Cada produto1 possui atributos como nome, cod, preço e quantidade. Implemente os seguintes métodos:
 
-- `adicionarProduto(long cod, String nome, double preco, int quantidade)`: Adiciona um produto ao cadastro.
+- `adicionarProduto(long cod, String nome, double preco, int quantidade)`: Adiciona um produto1 ao cadastro.
 - `exibirProdutosPorNome()`: Exibe todos os produtos do cadastro em ordem alfabética pelo nome.
 - `exibirProdutosPorPreco()`: Exibe todos os produtos do cadastro em ordem crescente de preço.
 </p>
