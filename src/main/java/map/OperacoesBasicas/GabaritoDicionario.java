@@ -3,10 +3,10 @@ package main.java.map.OperacoesBasicas;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Dicionario {
+public class GabaritoDicionario {
   private Map<String, String> dicionario;
 
-  public Dicionario() {
+  public GabaritoDicionario() {
     this.dicionario = new HashMap<>();
   }
 
@@ -39,25 +39,25 @@ public class Dicionario {
   }
 
   public static void main(String[] args) {
-    Dicionario dicionario = new Dicionario();
+    GabaritoDicionario gabaritoDicionario = new GabaritoDicionario();
 
     // Adicionar palavras (linguagens de programação)
-    dicionario.adicionarPalavra("java", "Linguagem de programação orientada a objetos.");
-    dicionario.adicionarPalavra("typescript", "Superset da linguagem JavaScript que adiciona tipagem estática.");
-    dicionario.adicionarPalavra("kotlin", "Linguagem moderna de programação para a JVM.");
+    gabaritoDicionario.adicionarPalavra("java", "Linguagem de programação orientada a objetos.");
+    gabaritoDicionario.adicionarPalavra("typescript", "Superset da linguagem JavaScript que adiciona tipagem estática.");
+    gabaritoDicionario.adicionarPalavra("kotlin", "Linguagem moderna de programação para a JVM.");
 
     // Exibir todas as palavras
-    dicionario.exibirPalavras();
+    gabaritoDicionario.exibirPalavras();
 
     // Pesquisar palavras
-    String definicaoJava = dicionario.pesquisarPorPalavra("java");
+    String definicaoJava = gabaritoDicionario.pesquisarPorPalavra("java");
     System.out.println("Definição da linguagem 'java': " + definicaoJava);
 
-    String definicaoCSharp = dicionario.pesquisarPorPalavra("csharp");
+    String definicaoCSharp = gabaritoDicionario.pesquisarPorPalavra("csharp");
     System.out.println(definicaoCSharp);
 
     // Remover uma palavra
-    dicionario.removerPalavra("typescript");
-    dicionario.exibirPalavras();
+    gabaritoDicionario.removerPalavra("typescript");
+    gabaritoDicionario.exibirPalavras();
   }
 }

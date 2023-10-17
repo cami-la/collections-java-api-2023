@@ -87,14 +87,14 @@ public class EstoqueProdutos {
 
     // Obtém e exibe o produto mais caro
     Produto produtoMaisCaro = estoque.obterProdutoMaisCaro();
-    System.out.println("Produto mais caro: " + produtoMaisCaro);
+    System.out.println("Produto1 mais caro: " + produtoMaisCaro);
 
     // Obtém e exibe o produto mais barato
     Produto produtoMaisBarato = estoque.obterProdutoMaisBarato();
-    System.out.println("Produto mais barato: " + produtoMaisBarato);
+    System.out.println("Produto1 mais barato: " + produtoMaisBarato);
 
     // Obtém e exibe o produto com a maior quantidade em valor no estoque
     Produto produtoMaiorQuantidadeValorTotal = estoque.obterProdutoMaiorQuantidadeValorTotalNoEstoque();
-    System.out.println("Produto com maior quantidade em valor no estoque: " + produtoMaiorQuantidadeValorTotal);
+    System.out.println("Produto1 com maior quantidade em valor no estoque: " + produtoMaiorQuantidadeValorTotal);
   }
 }
