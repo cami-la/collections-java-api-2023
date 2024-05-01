@@ -53,19 +53,38 @@ public class EstoqueProdutos {
   }
 
   public Produto obterProdutoMaiorQuantidadeValorTotalNoEstoque() {
-    Produto produtoMaiorQuantidadeValorNoEstoque = null;
-    double maiorValorTotalProdutoEstoque = 0d;
+    Produto produto = null;
     if (!estoqueProdutosMap.isEmpty()) {
-      for (Map.Entry<Long, Produto> entry : estoqueProdutosMap.entrySet()) {
-        double valorProdutoEmEstoque = entry.getValue().getPreco() * entry.getValue().getQuantidade();
-        if (valorProdutoEmEstoque > maiorValorTotalProdutoEstoque) {
-          maiorValorTotalProdutoEstoque = valorProdutoEmEstoque;
-          produtoMaiorQuantidadeValorNoEstoque = entry.getValue();
+        for (Produto p : estoqueProdutosMap.values()) {
+            if (produto == null) {
+                produto = p;
+                continue;
+            }
+
+            if (isMaiorQuantidadeValorTotal(p, produto)) {
+                produto = p;
+            }
         }
-      }
+        return produto;
     }
-    return produtoMaiorQuantidadeValorNoEstoque;
-  }
+    System.out.println("Nao tem produtos no estoque");
+    return produto;
+}
+
+private boolean isMaiorQuantidadeValorTotal(Produto p1, Produto p2) {
+    double totalProduto1 = p1.getPreco() * p1.getQuantidade();
+    double totalProduto2 = p2.getPreco() * p2.getQuantidade();
+    boolean isMaiorValorTotal = totalProduto1 > totalProduto2 ;
+    boolean isMesmoValorTotal = totalProduto1  == totalProduto2;
+    boolean isMaiorQuantidade = p1.getQuantidade() > p2.getQuantidade();
+
+    
+    if(isMaiorValorTotal || isMesmoValorTotal && isMaiorQuantidade){
+        return true;
+    }
+    
+    return false;
+}
 
   public static void main(String[] args) {
     EstoqueProdutos estoque = new EstoqueProdutos();
@@ -77,7 +96,8 @@ public class EstoqueProdutos {
     estoque.adicionarProduto(1L, "Notebook", 1, 1500.0);
     estoque.adicionarProduto(2L, "Mouse", 5, 25.0);
     estoque.adicionarProduto(3L, "Monitor", 10, 400.0);
-    estoque.adicionarProduto(4L, "Teclado", 2, 40.0);
+    estoque.adicionarProduto(4L, "TV", 1, 4000.0);
+    estoque.adicionarProduto(5L, "Teclado", 2, 40.0);
 
     // Exibe os produtos no estoque
     estoque.exibirProdutos();
