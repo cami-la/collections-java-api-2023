@@ -1,4 +1,4 @@
-package develop.java.list.ordenacao;
+package develop.java.list.ordenacao.OrdenacaoDePessoas;
 
 import java.util.ArrayList;
 import java.util.Collections;
