@@ -1,4 +1,4 @@
-package develop.java.set.operacoesbasicas;
+package develop.java.set.OperacoesBasicas.ConjuntoDeConvidados;
 
 import java.util.Objects;
 

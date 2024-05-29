@@ -1,4 +1,4 @@
-package develop.java.set.pesquisa;
+package develop.java.set.pesquisa.AgendaDeContatos;
 
 import java.util.HashSet;
 import java.util.Set;
