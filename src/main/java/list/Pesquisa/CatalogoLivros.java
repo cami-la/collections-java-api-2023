@@ -13,7 +13,7 @@ public class CatalogoLivros {
         this.livroList = new ArrayList<>();
     }
     
-    public void adicionarLivro(String titulo, String autor, int anoPublicacao){
+    public void adicionarLivro(String titulo, String autor, int anoPublicacao) {
         livroList.add(new Livro(titulo, autor, anoPublicacao));
     }
     

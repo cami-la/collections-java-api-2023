@@ -31,9 +31,12 @@ public class Livro {
 
     @Override
     public String toString() {
-        return "Livro [titulo=" + titulo + ", autor=" + autor + ", anoPublicacao=" + anoPublicacao + "]";
-    }
+        return "Livro {\n" +
+               "  titulo: " + titulo + ",\n" +
+               "  autor: " + autor + ",\n" +
+               "  anoPublicacao: " + anoPublicacao + "\n" +
+               "}";
 
-    
+    }
     
 }
