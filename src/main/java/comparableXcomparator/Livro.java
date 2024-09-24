@@ -15,7 +15,7 @@ class Livro implements Comparable<Livro> {
 		this.ano = an;
 	}
 
-	// Usado para ordenar livros por ano
+	// Usado para ordenar livros por título
 	public int compareTo(Livro l) {
 		return titulo.compareTo(l.titulo);
 	}
