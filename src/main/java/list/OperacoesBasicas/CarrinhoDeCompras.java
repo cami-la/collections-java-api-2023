@@ -5,79 +5,67 @@ import java.util.List;
 
 public class CarrinhoDeCompras {
   //atributos
-  private List<Item> itemList;
+  private List<Item> itens;
 
   public CarrinhoDeCompras() {
-    this.itemList = new ArrayList<>();
+    this.itens = new ArrayList<>();
   }
 
-  public void adicionarItem(String nome, double preco, int quantidade) {
-    Item item = new Item(nome, preco, quantidade);
-    this.itemList.add(item);
+  // métodos
+  public void addItem(String name, double price, int quantity) {
+    itens.add(new Item(name, price, quantity));
   }
 
-  public void removerItem(String nome) {
-    List<Item> itensParaRemover = new ArrayList<>();
-    if (!itemList.isEmpty()) {
-      for (Item i : itemList) {
-        if (i.getNome().equalsIgnoreCase(nome)) {
-          itensParaRemover.add(i);
-        }
+  // não se usa .remove() porque não é possível remover um item específico de uma lista de objetos com for
+  public void removeItem(String name){
+    List<Item> itensToRemove = new ArrayList<>();
+    if (!itens.isEmpty()){
+    for (Item i : itens) { // percorre a lista de itens
+      if (i.getName().equalsIgnoreCase(name)) {
+        itensToRemove.add(i); // adiona o item à lista de itens a serem removidos
       }
-      itemList.removeAll(itensParaRemover);
-    } else {
-      System.out.println("A lista está vazia!");
     }
+    itens.removeAll(itensToRemove); 
+  }
+  else {
+    System.out.println("Carrinho vazio, não é possível remover itens.");
+  }
   }
 
-  public double calcularValorTotal() {
-    double valorTotal = 0d;
-    if (!itemList.isEmpty()) {
-      for (Item item : itemList) {
-        double valorItem = item.getPreco() * item.getQuant();
-        valorTotal += valorItem; //valorTotal = valorTotal + valorItem;
-      }
-      return valorTotal;
-    } else {
-      throw new RuntimeException("A lista está vazia!");
+  public double getTotalPrice() {
+    double total = 0.0;
+    if (!itens.isEmpty()){
+    for (Item i : itens) {
+      total += i.getPrice() * i.getQuantity(); 
+    }
+    return total;
+  }
+    else {
+      System.out.println("Carrinho vazio, não é possível calcular o total.");
+      return total;
     }
   }
-
-  public void exibirItens() {
-    if (!itemList.isEmpty()) {
-      System.out.println(this.itemList);
-    } else {
-      System.out.println("A lista está vazia!");
-    }
-  }
-
-  @Override
-  public String toString() {
-    return "CarrinhoDeCompras{" +
-        "itens=" + itemList +
-        '}';
+  public void getItemDescriptions() {
+    System.out.println(itens);
   }
 
   public static void main(String[] args) {
-    // Criando uma instância do carrinho de compras
-    CarrinhoDeCompras carrinhoDeCompras = new CarrinhoDeCompras();
+    CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
+    System.out.printf("Total do carrinho R$: %.2f%n ", carrinho.getTotalPrice());
+    carrinho.getItemDescriptions();
+    carrinho.removeItem("Arroz");
+    System.out.println("");
 
-    // Adicionando itens ao carrinho
-    carrinhoDeCompras.adicionarItem("Lápis", 2d, 3);
-    carrinhoDeCompras.adicionarItem("Lápis", 2d, 3);
-    carrinhoDeCompras.adicionarItem("Caderno", 35d, 1);
-    carrinhoDeCompras.adicionarItem("Borracha", 2d, 2);
+    carrinho.addItem("Arroz", 5.99, 2);
+    carrinho.addItem("Feijão", 4.49, 1);
+    carrinho.addItem("Macarrão", 3.29, 3);
+    System.out.printf("Total do carrinho R$: %.2f%n", carrinho.getTotalPrice());
+    carrinho.getItemDescriptions();
+    System.out.println("");
 
-    // Exibindo os itens no carrinho
-    carrinhoDeCompras.exibirItens();
-
-    // Removendo um item do carrinho
-    carrinhoDeCompras.removerItem("Lápis");
-
-    // Exibindo os itens atualizados no carrinho
-    carrinhoDeCompras.exibirItens();
-
-    // Calculando e exibindo o valor total da compra
-    System.out.println("O valor total da compra é = " + carrinhoDeCompras.calcularValorTotal());
+    carrinho.removeItem("Feijão");
+    System.out.printf("Total do carrinho R$: %.2f%n", carrinho.getTotalPrice());
+    carrinho.getItemDescriptions();
+    
   }
 }
