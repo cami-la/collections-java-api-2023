@@ -1,0 +1,25 @@
+# Gradle
+.gradle/
+build/
+*.iml
+
+# IntelliJ IDEA
+.idea/
+out/
+gen/
+
+# Maven
+target/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# OpenJ9 / JVM
+/tmp/javashared/
+*.log
+*.trc
+
+# Windows residues
+bin/
+obj/

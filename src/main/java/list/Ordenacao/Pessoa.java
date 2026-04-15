@@ -4,9 +4,9 @@ import java.util.Comparator;
 
 public class Pessoa implements Comparable<Pessoa> {
   //atributos
-  private String nome;
-  private int idade;
-  private double altura;
+  private final String nome;
+  private final int idade;
+  private final double altura;
 
   public Pessoa(String nome, int idade, double altura) {
     this.nome = nome;
@@ -16,18 +16,18 @@ public class Pessoa implements Comparable<Pessoa> {
 
   @Override
   public int compareTo(Pessoa p) {
-    return Integer.compare(idade, p.getIdade());
+    return Integer.compare(this.idade, p.idade());
   }
 
-  public String getNome() {
+  public String nome() {
     return nome;
   }
 
-  public int getIdade() {
+  public int idade() {
     return idade;
   }
 
-  public double getAltura() {
+  public double altura() {
     return altura;
   }
 
@@ -39,11 +39,9 @@ public class Pessoa implements Comparable<Pessoa> {
         ", altura=" + altura +
         '}';
   }
-}
 
-class ComparatorPorAltura implements Comparator<Pessoa> {
-  @Override
-  public int compare(Pessoa p1, Pessoa p2) {
-    return Double.compare(p1.getAltura(), p2.getAltura());
+  // Java 25 Fluent Comparator syntax
+  public static Comparator<Pessoa> porAltura() {
+    return Comparator.comparingDouble(Pessoa::altura);
   }
 }
